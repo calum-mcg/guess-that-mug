@@ -1,14 +1,13 @@
 from imutils import paths
 import numpy as np
-import argparse
 import imutils
 import pickle
 import cv2
 import os
 
 # Set parameters required
-dataset = './dataset'
-embeddings = './embeddings/embeddings.pickle'
+dataset = './images'
+embeddings = './outputs/embeddings.pickle'
 prototxt = './prebuilt_model/deploy.prototxt.txt'
 model = './prebuilt_model/res10_300x300_ssd_iter_140000.caffemodel'
 embedding_model = './embedding_model/openface_nn4.small2.v1.t7'
@@ -32,7 +31,7 @@ imagePaths = list(paths.list_images(dataset))
 # loop over the image paths
 for (i, imagePath) in enumerate(imagePaths):
 	# extract the person name from the image path
-	print("[INFO] processing image {}/{}".format(i + 1, len(imagePaths)))
+	print("Processing image {}/{}".format(i + 1, len(imagePaths)))
 	name = imagePath.split(os.path.sep)[-2]
 
 	# load the image, resize it to have a width of 600 pixels (while
@@ -91,7 +90,7 @@ for (i, imagePath) in enumerate(imagePaths):
 			total += 1
 
 # dump the facial embeddings + names to disk
-print("[INFO] serializing {} encodings...".format(total))
+print("Serializing {} encodings...".format(total))
 data = {"embeddings": known_embeddings, "names": known_names}
 f = open(embeddings, "wb")
 f.write(pickle.dumps(data))

@@ -126,6 +126,7 @@ dmypy.json
 .idea
 
 # Non-required folders
-image
+images
 prebuilt_model
 embedding_model
+outputs
