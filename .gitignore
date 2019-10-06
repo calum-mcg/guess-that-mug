@@ -124,3 +124,7 @@ dmypy.json
 
 # Pycharm
 .idea
+
+# Non-required folders
+image
+prebuilt_model
