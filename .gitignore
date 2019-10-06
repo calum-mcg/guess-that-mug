@@ -128,3 +128,4 @@ dmypy.json
 # Non-required folders
 image
 prebuilt_model
+embedding_model
