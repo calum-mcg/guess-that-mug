@@ -127,6 +127,4 @@ dmypy.json
 
 # Non-required folders
 images
-prebuilt_model
-embedding_model
 outputs
