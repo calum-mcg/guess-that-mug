@@ -23,9 +23,9 @@ pip install -r requirements.txt
 ```
 
 I have provided three example scripts to show how to use the classes.
-1. [Capture facial and hand gesture images](capture_images.py)
-2. [Build (and save) both the facial recognition model and gesture recognition model](process_images.py)
-3. [Predict both faces and gestures live](predict_live.py)
+1. [Capture facial and hand gesture images](../master/gather_images.py)
+2. [Build (and save) both the facial recognition model and gesture recognition model](../master/process_images.py)
+3. [Predict both faces and gestures live](../master/predict_live.py)
 
 __*Please note:*__ When storing the images for both faces and gestures, the folders are used as labels to train the respective models. Please ensure the structure is the same as the following:
 <p align="center">
@@ -34,7 +34,27 @@ __*Please note:*__ When storing the images for both faces and gestures, the fold
 
 ## How it works
 ### Process
+The following process flows show how the class captures images. For gestures, background subtraction is used around the bounding box to identify the gesture. [OpenCV](https://docs.opencv.org/3.4/d1/dc5/tutorial_background_subtraction.html) has an insightful article with more details.
+<p align="center">
+  <img src="https://i.imgur.com/iGsprvJ.png" width="900">
+</p>
+For faces, the prebuilt OpenCV model is used to identify each face within the frame.
+<p align="center">
+  <img src="https://i.imgur.com/8MU1VKv.png" width="900">
+</p>
 
+The following process flows show how the class builds the models:
+<p align="center">
+  <img src="https://i.imgur.com/uGj0xE4.png" width="900">
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/maDc1Cc.png" width="900">
+</p>
+
+The following process flow shows how the class predicts faces and gestures live:
+<p align="center">
+  <img src="https://i.imgur.com/fBEOt5l.png" width="900">
+</p>
 
 ## References
 * [OpenCV](https://opencv.org/)
