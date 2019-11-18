@@ -11,7 +11,6 @@ import imutils
 import pickle
 import cv2
 
-
 class LivePrediction:
 	def __init__(self, output_folder, min_gesture_confidence, min_face_confidence, min_face_frame_count, a_weight,
 	             threshold, prebuilt_prototxt, prebuilt_face_model, prebuilt_embedding_model):

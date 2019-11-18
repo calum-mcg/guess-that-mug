@@ -16,7 +16,6 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.svm import SVC
 import pickle
 
-
 class ImageProcessing:
 	# Class contains methods to take store images from webcam
 	def __init__(self, gesture_output, face_output, a_weight, threshold, prebuilt_prototxt, prebuilt_model,
