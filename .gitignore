@@ -128,3 +128,4 @@ dmypy.json
 # Non-required folders
 images
 outputs
+Temp.png
