@@ -1,12 +1,14 @@
 # Guess That Mug: Live facial and gesture recognition
 ## Summary
-Multiple classes built in Python that predict faces and hand gestures, live through a webcam feed. This project was built with the aim of allowing users to become a human 'remote' - for example, playing/stopping personalised music playlists.
+Live facial and gesture recognition in Python using OpenCV, scikit-learn and TensorFlow.
+
+This project was built with the aim of allowing users to become a human 'remote' - for example, playing/stopping personalised music playlists.
 
 <p align="center">
   <img src="https://i.imgur.com/fuWiUNY.gif" width="650">
 </p>
 
-The project has been built in Python and allows the user to build their own facial and hand gesture recognition models using both Scikit-learn and TensorFlow. This is achieved in three steps:
+The project allows the user to build their own bespoke facial and hand gesture recognition models using both Scikit-learn and TensorFlow. This is achieved in three steps:
 1. Capture facial and hand gesture images for training the models
 2. Build the facial recognition model (SVM with Scikit) and the gesture recognition model (DNN with TensorFlow)
 3. Run webcam feed and use models to predict faces and gestures on the fly
